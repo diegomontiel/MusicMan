@@ -29,4 +29,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intentoK = new Intent(this, Keyboard.class);
         startActivity(intentoK);
     }
+
+    public void Metronome(View v){
+        Intent intentom = new Intent(this, Metronome.class);
+        startActivity(intentom);
+    }
 }
