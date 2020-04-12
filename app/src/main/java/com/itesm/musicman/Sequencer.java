@@ -22,9 +22,9 @@ public class Sequencer extends AppCompatActivity implements OnItemSelectedListen
     private ImageButton btnPlay;
     private MediaPlayer C,Cm,Abm,Ab,Am,A,Bbm,Bb,Bm,B,Dbm,Db,Dm,D,Ebm,Eb,Em,E,Fm,F,Gbm,Gb,Gm,G,empty;
     private Spinner spinner, spinner2,spinner3, spinner4;
+
+
     private Spinner [] arraySp={spinner, spinner2,spinner3, spinner4};
-
-
     private Runnable playback;
     private boolean playing = false;
 
@@ -113,24 +113,13 @@ public class Sequencer extends AppCompatActivity implements OnItemSelectedListen
 
     }
 
-    /*public void onClick(View v) {
-        //System.out.println(spinner.getSelectedItem().toString());
-        for(int i =0; i<4;i++){
-            System.out.println("entra for");
+    public void onClick(View v) {
 
-            sCollector(spinner.getSelectedItem().toString());
+        sCollector(spinner.getSelectedItem().toString());
 
-            System.out.println("1 iteracion");
-            try {
-                TimeUnit.SECONDS.sleep(2);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-                System.out.println("error");
-            }
-        }
-        System.out.println("sale for");
-    }*/
+    }
 
+    /*
     public void play(View v) {
         // play sound periodically
         playback = new Runnable() {
@@ -162,23 +151,17 @@ public class Sequencer extends AppCompatActivity implements OnItemSelectedListen
         thandler.start();
     }
 
-    /**
-     * Stop the playback.
-     */
     public void stop() {
         playing = false;
     }
 
-    /**
-     * Toggle the reproduction
-     */
     public void toggle() {
         if (playing) {
             stop();
         } else {
             //play();
         }
-    }
+    }*/
 
     public void sCollector (String chord){
         switch(chord){

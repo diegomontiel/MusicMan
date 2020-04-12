@@ -7,7 +7,7 @@ import android.view.Menu;
 import android.view.View;
 
 public class Keyboard extends Activity {
-    MediaPlayer notaDo, notaRe, notaMi, notaFa, notaSol, notaLa, notaSi;
+    MediaPlayer notaDo, notaRe, notaMi, notaFa, notaSol, notaLa, notaSi, rebemol, mibemol, solbemol, labemol, sibemol;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,13 +15,20 @@ public class Keyboard extends Activity {
         setContentView(R.layout.activity_keyboard);
 
         // Reproductores de las notas:
-        notaDo = MediaPlayer.create(this, R.raw.nota_do);
-        notaRe = MediaPlayer.create(this, R.raw.nota_re);
-        notaMi = MediaPlayer.create(this, R.raw.nota_mi);
-        notaFa = MediaPlayer.create(this, R.raw.nota_fa);
-        notaSol = MediaPlayer.create(this, R.raw.nota_sol);
-        notaLa = MediaPlayer.create(this, R.raw.nota_la);
-        notaSi = MediaPlayer.create(this, R.raw.nota_si);
+        notaDo = MediaPlayer.create(this, R.raw.c5);
+        notaRe = MediaPlayer.create(this, R.raw.d5);
+        notaMi = MediaPlayer.create(this, R.raw.e5);
+        notaFa = MediaPlayer.create(this, R.raw.f5);
+        notaSol = MediaPlayer.create(this, R.raw.g5);
+        notaLa = MediaPlayer.create(this, R.raw.a5);
+        notaSi = MediaPlayer.create(this, R.raw.b5);
+
+        rebemol = MediaPlayer.create(this, R.raw.db5);
+        mibemol = MediaPlayer.create(this, R.raw.eb5);
+        solbemol = MediaPlayer.create(this, R.raw.gb5);
+        labemol = MediaPlayer.create(this, R.raw.ab5);
+        sibemol = MediaPlayer.create(this, R.raw.bb5);
+
     }
     /*
     @Override
@@ -31,10 +38,7 @@ public class Keyboard extends Activity {
         return true;
     }*/
 
-    /**
-     * Reproduce la nota correspondiente a cada boton.
-     * @param view La vista que se ha pulsado
-     */
+
     public void tocarNota(View view) {
         switch (view.getId()) {
             case R.id.nota_do:
@@ -44,19 +48,31 @@ public class Keyboard extends Activity {
                 notaRe.start();
                 break;
             case R.id.nota_reb:
-                notaSi.start();
+                rebemol.start();
                 break;
             case R.id.nota_mi:
                 notaMi.start();
                 break;
+            case R.id.nota_mib:
+                mibemol.start();
+                break;
             case R.id.nota_fa:
                 notaFa.start();
+                break;
+            case R.id.nota_solb:
+                solbemol.start();
                 break;
             case R.id.nota_sol:
                 notaSol.start();
                 break;
+            case R.id.nota_lab:
+                labemol.start();
+                break;
             case R.id.nota_la:
                 notaLa.start();
+                break;
+            case R.id.nota_sib:
+                sibemol.start();
                 break;
             case R.id.nota_si:
                 notaSi.start();
