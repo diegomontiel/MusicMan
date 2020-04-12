@@ -1,0 +1,154 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Keyboard">
+
+    <Button
+        android:id="@+id/nota_reb"
+        android:layout_width="0dp"
+        android:layout_height="260dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="35dp"
+        android:layout_weight="1"
+        android:background="@drawable/fondo_negro"
+        android:onClick="tocarNota"
+        app:layout_constraintEnd_toStartOf="@+id/nota_mib"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/LinearLayout1" />
+
+    <Button
+        android:id="@+id/nota_mib"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="115dp"
+        android:layout_weight="1"
+        android:background="@drawable/fondo_negro"
+        android:onClick="tocarNota"
+        app:layout_constraintBottom_toBottomOf="@+id/nota_reb"
+        app:layout_constraintEnd_toStartOf="@+id/nota_solb"
+        app:layout_constraintStart_toEndOf="@+id/nota_reb"
+        app:layout_constraintTop_toTopOf="@+id/nota_reb" />
+
+    <Button
+        android:id="@+id/nota_solb"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="30dp"
+        android:layout_weight="1"
+        android:background="@drawable/fondo_negro"
+        android:onClick="tocarNota"
+        app:layout_constraintBottom_toBottomOf="@+id/nota_lab"
+        app:layout_constraintEnd_toStartOf="@+id/nota_lab"
+        app:layout_constraintStart_toEndOf="@+id/nota_mib"
+        app:layout_constraintTop_toTopOf="@+id/nota_lab" />
+
+    <Button
+        android:id="@+id/nota_lab"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="30dp"
+        android:layout_weight="1"
+        android:background="@drawable/fondo_negro"
+        android:onClick="tocarNota"
+        app:layout_constraintBottom_toBottomOf="@+id/nota_sib"
+        app:layout_constraintEnd_toStartOf="@+id/nota_sib"
+        app:layout_constraintStart_toEndOf="@+id/nota_solb"
+        app:layout_constraintTop_toTopOf="@+id/nota_sib" />
+
+    <Button
+        android:id="@+id/nota_sib"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="56dp"
+        android:layout_weight="1"
+        android:background="@drawable/fondo_negro"
+        android:onClick="tocarNota"
+        app:layout_constraintBottom_toBottomOf="@+id/nota_mib"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nota_lab"
+        app:layout_constraintTop_toTopOf="@+id/nota_mib" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:baselineAligned="false"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/nota_do"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/fondo_blanco"
+            android:onClick="tocarNota"
+            android:orientation="vertical"></Button>
+
+        <Button
+            android:id="@+id/nota_re"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/fondo_blanco"
+            android:onClick="tocarNota"
+            android:orientation="vertical"></Button>
+
+        <Button
+            android:id="@+id/nota_mi"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/fondo_blanco"
+            android:onClick="tocarNota"
+            android:orientation="vertical"></Button>
+
+        <Button
+            android:id="@+id/nota_fa"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/fondo_blanco"
+            android:onClick="tocarNota"
+            android:orientation="vertical"></Button>
+
+        <Button
+            android:id="@+id/nota_sol"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/fondo_blanco"
+            android:onClick="tocarNota"
+            android:orientation="vertical"></Button>
+
+        <Button
+            android:id="@+id/nota_la"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/fondo_blanco"
+            android:onClick="tocarNota"
+            android:orientation="vertical"></Button>
+
+        <Button
+            android:id="@+id/nota_si"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/fondo_blanco"
+            android:onClick="tocarNota"
+            android:orientation="vertical"></Button>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
