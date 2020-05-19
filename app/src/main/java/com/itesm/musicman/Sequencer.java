@@ -77,6 +77,7 @@ public class Sequencer extends AppCompatActivity implements OnItemSelectedListen
         MediaPlayer[]chordsMP= {empty,C,Cm,Db,Dbm,D,Dm,Eb,Ebm,E,Em,F,Fm,Gb,Gbm,G,Gm,Ab,Abm,A,Am,Bb,Bbm,B,Bm};
 
 
+
         //spinners
 
         spinner = findViewById(R.id.spinner);
@@ -97,6 +98,13 @@ public class Sequencer extends AppCompatActivity implements OnItemSelectedListen
 
         btnPlay = findViewById(R.id.btnPlay);
 
+
+        btnPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Em.start();
+            }
+        });
     }
 
     @Override
@@ -107,6 +115,8 @@ public class Sequencer extends AppCompatActivity implements OnItemSelectedListen
         if(item!="-") {
             Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_SHORT).show();
         }
+
+
     }
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
